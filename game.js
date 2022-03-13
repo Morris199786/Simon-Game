@@ -81,7 +81,10 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $("body").removeClass("game-over");
     }, 200);
-    $("#level-title").html("Game Over, Press Any key to Restart");
+    $("#level-title").html("Game Over, you ended at level " + level);
+    setTimeout(function() {
+      $("#level-title").html("Press Any Key to Restart")
+    }, 2000);
     // call startOver once the user gets wrong
     startOver();
   }
